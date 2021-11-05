@@ -26,9 +26,6 @@ class PI_Controller():
         prop = self.gains[:,0]*errors
         intgr = self.gains[:,1]*self.sum_errors()
         deri = self.gains[:,2]*(self.error_buffer[:,-1] - self.error_buffer[:,-2])
-        
-        # print(errors)
-        # print(prop,intgr)
 
         # No derivative term
         outputs = prop + intgr + deri
