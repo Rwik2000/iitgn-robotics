@@ -52,24 +52,6 @@ class SCARA():
         zc = self.d1 - d
 
         return xc,yc,zc
-    
-    def forward_kinematics(self,q):
-        q1,q2,d = q
-        xc = self.d1*np.cos(q1) + self.a2*np.cos(q1+q2)
-        yc = self.d1*np.sin(q1) + self.a2*np.sin(q1+q2)
-        zc = self.d1 - d
-
-        return xc,yc,zc
-            
-            
-    def forward_kinematics(self,q):
-        q1,q2,d = q
-        xc = self.a1*np.cos(q1) + self.a2*np.cos(q1+q2)
-        yc = self.a1*np.sin(q1) + self.a2*np.sin(q1+q2)
-        zc = self.d1 - d
-
-
-        return xc,yc,zc
 
     def plotter(self,q):
         plt.plot(q[0])
@@ -183,8 +165,6 @@ class SCARA():
         ax.plot3D(end_effector[:,0], end_effector[:,1], end_effector[:,2], 'gray')
     
         plt.show() 
-
-
 
 
             

@@ -42,6 +42,10 @@ def oneD_traj(points,t0,tf):
     z = np.ones(intervals)*points[1][2]
 
     traj_points = np.vstack((x,y[0],z)).transpose()
+    traj_vels = np.vstack((np.zeros_like(x),y_dot[0],np.zeros_like(z))).transpose()
+    traj_acc = np.vstack((np.zeros_like(x),y_ddot[0],np.zeros_like(z))).transpose()
+
+
 
     return traj_points,t[0]
 
