@@ -1,4 +1,6 @@
 import numpy as np
+from scipy.optimize import fsolve
+import matplotlib.pyplot as plt
 from controller import PD_Controller,PD_FeedForw_Controller, PD_FF_CTM_Controller,MultiVariable_Controller
 from traj import oneD_traj
 
